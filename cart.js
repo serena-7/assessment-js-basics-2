@@ -35,7 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((total, item) => total + item.price, 0);
+// console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,8 +55,11 @@ const cart = [
 */
 
 //CODE HERE
+function calcFinalPrice(cartTotal,couponValue,tax){
+    return finalPrice = cartTotal * (1 + tax) - couponValue;
+}
 
-
+// console.log(calcFinalPrice(summedPrice,3,.07));
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,6 +83,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    Properties of a customer:
+    - Name (string)
+    - Payment Method (string of 'card', 'cash', or 'check')
+    - Reward Member (boolean) determines if customer has rewards membership which is true or false.
 
 */
 
@@ -88,3 +96,8 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+    name: 'Joe',
+    payMethod: 'card',
+    rewardMember: true
+}
